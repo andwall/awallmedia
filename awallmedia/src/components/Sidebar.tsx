@@ -19,7 +19,6 @@ const Sidebar = () => {
     <Flex
       position={'sticky'}
       justifyContent={'flex-end'}
-   
     >
       <Flex
         marginLeft={'auto'} 
@@ -50,7 +49,6 @@ const Sidebar = () => {
         <Box>
           <ColorModeToggler />
         </Box>
-
       </Flex>
     </Flex>
   )

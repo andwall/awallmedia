@@ -3,10 +3,9 @@ import Sidebar from './components/Sidebar'
 import { ChakraUIProvider } from './theme/chakra-ui.provider'
 
 function App() {
-
   return (
     <>
-        <Sidebar/>
+      <Sidebar/>
     </>
   )
 }
