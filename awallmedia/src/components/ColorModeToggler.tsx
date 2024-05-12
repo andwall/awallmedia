@@ -1,12 +1,16 @@
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
-import { IconButton, useColorMode } from "@chakra-ui/react";
+import { Flex, IconButton, Text, useColorMode } from "@chakra-ui/react";
 
 export const ColorModeToggler = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
-      <>
+      <Flex 
+        gap={'8px'}
+        alignItems={'center'} 
+      >
         {colorMode === "light" ?  
-          <IconButton 
+          <IconButton
+            title="Color Mode"
             onClick={toggleColorMode}
             isRound={true}
             _hover={{colorScheme: '#03ad7a', variant: 'outline' }}
@@ -16,6 +20,7 @@ export const ColorModeToggler = () => {
           >
           </IconButton> 
         : <IconButton 
+            title="Color Mode"
             onClick={toggleColorMode}
             isRound={true}
             aria-label='Done'
@@ -23,7 +28,9 @@ export const ColorModeToggler = () => {
             icon={<SunIcon/>}
           >
           </IconButton> }
-      </>
+
+          <Text>Color Mode</Text>
+      </Flex>
       
   );
 };
